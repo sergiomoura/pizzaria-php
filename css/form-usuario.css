@@ -1,0 +1,56 @@
+#form-usuario {
+    width: 480px;
+    margin: 5vh auto;
+    padding: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+#form-usuario label{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#form-usuario input {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top:10px;
+}
+
+#form-usuario label img{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+#form-usuario label div{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#form-usuario label input[type=file]{
+    display: none;
+}
+
+#form-usuario .controles{
+    display: flex;
+}
+
+#form-usuario .controles button[type=reset]{
+    width: 30%;
+    margin-right: 10px;
+}
+
+#form-usuario .controles button[type=submit]{
+    flex-grow: 1;
+}
