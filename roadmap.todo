@@ -1,9 +1,9 @@
 Criar páginas em HTML e CSS para visitante:
-    ✔ Home (index.php) @done
+    ✔ Home (index.php) @done(20-04-14 17:23)
     ☐ Meu carrinho (clientes/carrinho.php)
     ☐ Login (clientes/cliente-login.php)
     ☐ Cadastro (clientes/cliente-create.php)
-    ☐ Detalhes de Pizza (pizza.php)
+    ✔ Detalhes de Pizza (pizza.php) @done(20-04-14 17:23)
 
 Criar Páginas em HTML e CSS para administrador:
     ☐ Login (adm/adm-login.php)
@@ -18,8 +18,8 @@ Criar Páginas em HTML e CSS para administrador:
     ☐ Show pedido (pedidos/show-pedidos.php)
 
     ☐ List Usuários (usuarios/list-usuarios.php)
-    ☐ Create Usuário (usuarios/create-usuario.php)
-    ☐ Edit Usuário (usuarios/edit-usuarios.php)
+    ✔ Create Usuário (usuarios/create-usuario.php) @done(20-04-14 17:23)
+    ✔ Edit Usuário (usuarios/edit-usuarios.php) @done(20-04-14 17:23)
 
 ☐ Mostrar pizzas dinamicamente carregando de includes/pizzas.php
 ☐ Criar arquivo includes/functions.php com algumas funções [PHP - FUNÇÕES]
