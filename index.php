@@ -10,6 +10,7 @@
 	<title>Pizzaria Fantástica</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 	<form id="form-busca">
