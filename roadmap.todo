@@ -1,0 +1,54 @@
+Criar páginas em HTML e CSS para visitante:
+    ✔ Home (index.php) @done
+    ☐ Meu carrinho (clientes/carrinho.php)
+    ☐ Login (clientes/cliente-login.php)
+    ☐ Cadastro (clientes/cliente-create.php)
+    ☐ Detalhes de Pizza (pizza.php)
+
+Criar Páginas em HTML e CSS para administrador:
+    ☐ Login (adm/adm-login.php)
+    ☐ Alterar Cadastro (adm/adm-cadastro.php)
+    
+    ☐ List Pizzas (pizzas/list-pizzas.php)
+    ☐ Create Pizza (pizzas/create-pizza.php)
+    ☐ Edit Pizza (pizzas/edit-pizza.php)
+    ☐ Show Pizza (pizzas/show-pizza.php)
+
+    ☐ List pedidos (cancel|entregue) (pedidos/list-pedidos.php)
+    ☐ Show pedido (pedidos/show-pedidos.php)
+
+    ☐ List Usuários (usuarios/list-usuarios.php)
+    ☐ Create Usuário (usuarios/create-usuario.php)
+    ☐ Edit Usuário (usuarios/edit-usuarios.php)
+
+☐ Mostrar pizzas dinamicamente carregando de includes/pizzas.php
+☐ Criar arquivo includes/functions.php com algumas funções [PHP - FUNÇÕES]
+☐ Alterar o index.php para que ele realize busca por nome da pizza [PHP - Métodos HTTP] 
+☐ Alterar o index.php para que cada link pizza aponte para pizza.php?id=$idDaPizza [PHP - Métodos HTTP]
+☐ Fazer com que pizza.php exiba detalhes da pizza passada por get [PHP - Métodos HTTP]
+☐ Fazer com que pizza.php exiba erro se a pizza não for encontrada [PHP - Métodos HTTP]
+☐ Fazer com que usuarios/create-usuario.php valide formulário de criação de usuário [PHP - Métodos HTTP]:
+    . Nome
+    . CPF
+    . Endereço
+    . Telefone
+    . Senha
+
+☐ Fazer com que usuarios/create-usuario.php salve as informações de um usuário em um JSON com senha criptografada. [PHP - ARQUIVOS]
+☐ Fazer com que usuarios/create-usuario.php upload de foto do cliente [PHP - ARQUIVOS]
+☐ Fazer com que usuarios/edit-usuario.php mostre as informações de um usuário. [PHP - ARQUIVOS]
+☐ Fazer com que usuarios/edit-usuario.php altere os dados/foto de um usuário. [PHP - ARQUIVOS]
+
+☐ Fazer com que somente um usuário logado acesse páginas restritas [PHP - SESSION e COOKIES]
+☐ Fazer com que usuário possa deslogar. [PHP - SESSION e COOKIES]
+☐ Fazer com que a partir do index.php cliente possa adicionar uma pizza ao carrinho [PHP - SESSION e COOKIES]
+☐ Fazer com que carrinho.php exiba as pizzas adicionadas no carrinho
+
+EXTRAS:
+    ☐ Desenhar tela de cadastro do cliente (clientes/create-cliente.php)
+    ☐ Fazer tela de cadastro do cliente cadastrar um cliente em clientes.json.
+    ☐ Alterar carrinho.php para que cliente possa:
+        - ou finalizar um pedido se o cliente estiver logado
+        - ou efetuar o login (link para clientes/login-cliente.php)
+        - ou fazer um cadastro (link para clientes/create-cliente.php)
+
