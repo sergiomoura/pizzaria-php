@@ -1,6 +1,6 @@
 #form-usuario {
-    width: 480px;
-    margin: 5vh auto;
+    min-width: 440px;
+    margin: 0 auto;
     padding: 50px;
     background-color: rgba(0,0,0,0.5);
     color: white;
@@ -53,4 +53,39 @@
 
 #form-usuario .controles button[type=submit]{
     flex-grow: 1;
+}
+
+@media(min-width:480px){
+    #form-usuario{
+        width:480px;
+        margin: calc((100vw - 480px) / 10) auto;
+    }
+}
+
+@media(min-width:960px){
+    #form-usuario{
+        width:800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #form-usuario label{
+        width: calc((100% - 20px) / 2);
+    }
+
+    #form-usuario .controles{
+        width: calc((100% - 20px) / 2);
+        align-items: flex-end;
+    }
+
+    #form-usuario label:last-of-type{
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width:980px){
+    #form-usuario{
+        margin: 50px auto;
+    }
 }
