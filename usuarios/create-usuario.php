@@ -35,7 +35,7 @@
             <input type="password" name="confirmacao" id="confirmacao" placeholder="Confirme a senha digitada">
         </label>
 		<label>
-            <img src="../img/no-image.png">
+            <img src="../img/no-image.png" id="foto-carregada">
             <div>Clique para selecionar sua foto</div>
             <input type="file" name="foto" id="foto">
         </label>
@@ -43,6 +43,15 @@
             <button type="reset" class="secondary">Resetar</button>
             <button type="submit" class="primary">Cadastrar-se!</button>
         </div>
-	</form>
+    </form>
+    <script>
+        document.getElementById("foto").onchange = (evt) => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById("foto-carregada").src = e.target.result;
+            };
+            reader.readAsDataURL(evt.target.files[0]);
+        };
+    </script>
 </body>
 </html>
