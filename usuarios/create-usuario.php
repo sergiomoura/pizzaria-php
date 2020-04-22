@@ -1,3 +1,18 @@
+<?php 
+
+    $nomeOk = true;
+
+    if($_POST){
+
+        // Validando o nome
+        if($_POST['nome'] == ''){
+            $nomeOk = false;
+            // Quando desejarmos redirecionar o usuário para uma outra página
+            // header("location: erro.php");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +24,11 @@
 </head>
 <body>
 	<link rel="stylesheet" href="../css/form-usuario.css">
-	<form id="form-usuario">
+	<form id="form-usuario" method="POST">
 		<label>
             Nome:
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            <?= ($nomeOk?'':'<span class="erro">Preencha o campo com um nome válido');  ?>
         </label>
 		<label>
             Telefone:
