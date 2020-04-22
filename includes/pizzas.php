@@ -6,7 +6,7 @@ $pizzas = [
 		"nome" => "Calabresa",
 		"ingredientes" => ["mussarela", "calabresa", "cebola"],
 		"preco" => 38.5,
-		"img" => "/img/calabresa.jpg",
+		"img" => "./img/calabresa.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -14,7 +14,7 @@ $pizzas = [
 		"nome" => "Pepperoni",
 		"ingredientes" => ["mussarela", "pepperoni", "cebola"],
 		"preco" => 48.55,
-		"img" => "/img/pepperoni.jpg",
+		"img" => "./img/pepperoni.jpg",
 		"destaque" =>  false
 	],
 	[
@@ -22,7 +22,7 @@ $pizzas = [
 		"nome" => "Fracatu",
 		"ingredientes" => ["mussarela", "frango", "catupiry", "cebola"],
 		"preco" => 38.5,
-		"img" => "/img/fracatu.jpg",
+		"img" => "./img/fracatu.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -30,7 +30,7 @@ $pizzas = [
 		"nome" => "Marguerita",
 		"ingredientes" => ["mussarela", "tomate", "manjericão"],
 		"preco" => 33.5,
-		"img" => "/img/marguerita.jpg",
+		"img" => "./img/marguerita.jpg",
 		"destaque" =>  false
 	],
 	[
@@ -38,7 +38,7 @@ $pizzas = [
 		"nome" => "Quatro Queijos",
 		"ingredientes" => ["mussarela", "gorgonzola", "provolone", "parmesão"],
 		"preco" => 38.5,
-		"img" => "/img/quatroqueijos.jpg",
+		"img" => "./img/quatroqueijos.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -46,7 +46,7 @@ $pizzas = [
 		"nome" => "Portuguesa",
 		"ingredientes" => ["cebola", "pimentão", "ovo", "mussarela", "presunto"],
 		"preco" => 40.5,
-		"img" => "/img/portuguesa.jpg",
+		"img" => "./img/portuguesa.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -54,7 +54,7 @@ $pizzas = [
 		"nome" => "Power",
 		"ingredientes" => ["arroz", "feijão", "farinha", "salada", "carne"],
 		"preco" => 38.5,
-		"img" => "/img/power.jpg",
+		"img" => "./img/power.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -62,7 +62,7 @@ $pizzas = [
 		"nome" => "Caipira",
 		"ingredientes" => ["mussarela", "milho verde", "frango"],
 		"preco" => 38.5,
-		"img" => "/img/caipira.jpg",
+		"img" => "./img/caipira.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -70,7 +70,7 @@ $pizzas = [
 		"nome" => "Napolitana",
 		"ingredientes" => ["mussarela", "gorgonzola", "provolone", "parmesão"],
 		"preco" => 55.5,
-		"img" => "/img/napolitana.jpg",
+		"img" => "./img/napolitana.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -78,7 +78,7 @@ $pizzas = [
 		"nome" => "Baiana",
 		"ingredientes" => ["mussarela", "gorgonzola", "provolone", "parmesão"],
 		"preco" => 38.5,
-		"img" => "/img/baiana.jpg",
+		"img" => "./img/baiana.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -86,7 +86,7 @@ $pizzas = [
 		"nome" => "Meat & Bacon",
 		"ingredientes" => ["mussarela", "calabresa", "bacon"],
 		"preco" => 38.5,
-		"img" => "/img/meatbacon.jpg",
+		"img" => "./img/meatbacon.jpg",
 		"destaque" =>  true
 	],
 	[
@@ -94,7 +94,7 @@ $pizzas = [
 		"nome" => "Rúcula",
 		"ingredientes" => ["mussarela", "rúcula", "tomate seco"],
 		"preco" => 38.5,
-		"img" => "/img/rucula.jpg",
+		"img" => "./img/rucula.jpg",
 		"destaque" =>  true
 	]
 ];
