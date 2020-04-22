@@ -1,3 +1,27 @@
+<?php
+/**
+ * 
+ * Fazer com que o script pizza.php capture o id de uma pizza pelo
+ * $_GET e exiba as informações da pizza desse id. 
+ * 
+ */
+	// Incluir os scripts auxiliares
+	include("includes/pizzas.php");
+	include("includes/functions.php");
+
+	// Capturar o id pedido
+	$id = $_GET['id'];
+
+	// Carregar a pizza que tem esse id
+	$pizza = pizzaPorId($id);
+
+	// echo "<pre>";
+	// print_r($pizza);
+	// echo "</pre>";
+	// die();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +34,10 @@
 <body>
 	<link rel="stylesheet" href="css/pizza.css">
 	<main>
-		<h1>Fracatu</h1>
-		<h2>R$ 38.50</h2>
-		<img src="img/fracatu.jpg" alt="Fracatu">
-		<div>Ingredientes: mussarela, frango, catupiry, cebola</div>
+		<h1><?= $pizza['nome'] ?></h1>
+		<h2>R$ <?= $pizza['preco'] ?></h2>
+		<img src="<?= $pizza['img'] ?>" alt="<?= $pizza['nome'] ?>">
+		<div>Ingredientes: <?= implode(", ", $pizza["ingredientes"])  ?></div>
 		<button>+ Add</button>
 		<a href="#" class="prev">&lt;</a>
 		<a href="#" class="next">&gt;</a>

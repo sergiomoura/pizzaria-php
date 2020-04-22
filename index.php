@@ -6,7 +6,7 @@
 	if($_GET){
 
 		// Usuário está querendo buscar algo!
-		
+
 		// Capturando o trecho digitado pelo usuário
 		$trecho = $_GET['busca'];
 
@@ -37,7 +37,7 @@
 		<?php foreach($pizzas as $pizza): ?>
 		<article>
 			<img src="<?= $pizza['img'] ?>" alt="<?= $pizza['nome'] ?>">
-			<a href="/pizzas/?">Ver Mais</a>
+			<a href="pizza.php?id=<?= $pizza['id'] ?>">Ver Mais</a>
 			<button>+ Add</button>
 			<div><?= $pizza['nome'] ?></div>
 			<span>R$ <?= number_format($pizza["preco"], 2, ',', '.')  ?></span>			
