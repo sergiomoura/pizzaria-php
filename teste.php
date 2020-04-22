@@ -9,9 +9,7 @@
     include("includes/pizzas.php");
     include("includes/functions.php");
 
-    $pizzas = pizzasSemDestaque();
-
     echo "<pre>";
-    print_r($pizzas);
+    print_r($_GET);
     
 ?>

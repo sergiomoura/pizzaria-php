@@ -1,6 +1,21 @@
 <?php 
 	include("includes/pizzas.php");
 	include("includes/functions.php");
+
+	// Testando se há alguma coisa no $_GET;
+	if($_GET){
+
+		// Usuário está querendo buscar algo!
+		
+		// Capturando o trecho digitado pelo usuário
+		$trecho = $_GET['busca'];
+
+		// Capturar as pizzas que contém o $trecho no nome
+		$pizzas = buscaPizza($trecho);
+
+	}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +28,7 @@
 	<link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-	<form id="form-busca">
+	<form id="form-busca" method="GET">
 		<input type="text" name="busca" placeholder="Qual pizza você procura?" autocomplete="off">
 		<button type="submit">Buscar</button>
 	</form>
