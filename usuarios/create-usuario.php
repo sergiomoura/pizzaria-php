@@ -2,20 +2,40 @@
 
     // Valores padrãos
     $nome = '';
+    $endereco = '';
+    $senha = '';
+    $confirmacao = '';
 
     // Variáveis de controle de erro
     $nomeOk = true;
+    $enderecoOk = true;
+    $senhaOk = true;
+
 
     // Verificar se o usuário enviou o formulário
     if($_POST){
 
         // Guardando o nome em $nome
         $nome = $_POST['nome'];
-
+        $endereco = $_POST['endereco'];
+        $senha = $_POST['senha'];
+        $confirmacao = $_POST['confirmacao'];
+        
         // Validando o nome
         if( strlen($_POST['nome']) < 5){
             $nomeOk = false;
         }
+
+        // Validando o endereço
+        if( strlen($endereco) < 20 ){
+            $enderecoOk = false;
+        }
+
+        // Validando senha
+        if(strlen($senha) < 5 || $senha != $confirmacao){
+            $senhaOk = false;
+        }
+
     }
 ?>
 
@@ -46,15 +66,17 @@
         </label>
 		<label>
             Endereço:
-            <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereco">
+            <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereco" value="<?= $endereco ?>">
+            <?= ($enderecoOk ? '' : '<span class="erro">Preencha o campo com um pelo menos 20 caracteres</span>');  ?>
         </label>
 		<label>
             Senha:
-            <input type="password" name="senha" id="senha" placeholder="Digite uma senha">
+            <input type="password" name="senha" id="senha" placeholder="Digite uma senha" value="<?= $senha ?>">
+            <?= ($senhaOk ? '' : '<span class="erro">Senha inválido</span>');  ?>
         </label>
 		<label>
             Confirmação:
-            <input type="password" name="confirmacao" id="confirmacao" placeholder="Confirme a senha digitada">
+            <input type="password" name="confirmacao" id="confirmacao" placeholder="Confirme a senha digitada" value="<?= $confirmacao ?>">
         </label>
 		<label>
             <img src="../img/no-image.png" id="foto-carregada">
