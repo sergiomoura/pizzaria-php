@@ -50,6 +50,7 @@
         
     }
 
+
      /**
      * Defina uma função que retorne um array com as pizzas
      * de destaque. Dica: $vetor[] = 3 adiciona o número 3
@@ -154,4 +155,20 @@
      * Defina uma função que impima as informações de uma pizza
      */
     function pizzaPrint($pizza){}
+
+    /**
+     * Carrega os usuários do arquivo usuarios.json
+     * e retorna um array associativo contendo os usuários
+     */ 
+    function carregaUsuarios(){
+
+    }
+
+    /**
+     * Adiciona um novo usuário no arquivo usuarios.json
+     */
+    function addUsuario($nome,$telefone,$endereco,$senha,$imagem){
+
+    }
+
 ?>
