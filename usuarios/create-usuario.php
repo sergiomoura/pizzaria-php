@@ -1,14 +1,20 @@
-<?php 
+<?php
 
+    // Valores padrãos
+    $nome = '';
+
+    // Variáveis de controle de erro
     $nomeOk = true;
 
+    // Verificar se o usuário enviou o formulário
     if($_POST){
 
+        // Guardando o nome em $nome
+        $nome = $_POST['nome'];
+
         // Validando o nome
-        if($_POST['nome'] == ''){
+        if( strlen($_POST['nome']) < 5){
             $nomeOk = false;
-            // Quando desejarmos redirecionar o usuário para uma outra página
-            // header("location: erro.php");
         }
     }
 ?>
@@ -27,8 +33,8 @@
 	<form id="form-usuario" method="POST">
 		<label>
             Nome:
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-            <?= ($nomeOk?'':'<span class="erro">Preencha o campo com um nome válido');  ?>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?= $nome ?>">
+            <?= ($nomeOk ? '' : '<span class="erro">Preencha o campo com um nome válido</span>');  ?>
         </label>
 		<label>
             Telefone:
