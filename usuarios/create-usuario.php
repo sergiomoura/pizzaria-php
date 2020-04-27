@@ -36,6 +36,13 @@
             $senhaOk = false;
         }
 
+        // Se tudo estiver ok, salva o usuário e redireciona para 
+        // um dado endereço
+        // if($senhaOk && $nomeOk && $enderecoOk){
+        //     addUsuario($nome, $telefone, $email, $endereço, $senha, $imagem);
+
+        // }
+
     }
 ?>
 

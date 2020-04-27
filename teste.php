@@ -6,7 +6,7 @@
     $usuarios = json_decode($string_json,true);
 
     var_dump($string_json);
-
+    var_dump($usuarios);
     echo "<pre>";
     print_r($usuarios);
     echo "</pre>";
@@ -15,5 +15,10 @@
     $string_json = json_encode($usuarios);
 
     file_put_contents('includes/teste.txt',$string_json);
+
+    include('includes/functions.php');
+    echo "<pre>";
+    print_r(carregaUsuarios());
+    echo "</pre>";
 ?>
 
