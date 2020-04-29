@@ -155,7 +155,6 @@
      * Defina uma função que impima as informações de uma pizza
      */
     function pizzaPrint($pizza){}
-    echo('ok');
     /**
      * Carrega os usuários do arquivo usuarios.json
      * e retorna um array associativo contendo os usuários
