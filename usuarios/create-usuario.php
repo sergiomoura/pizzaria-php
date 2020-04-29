@@ -13,6 +13,11 @@
     $enderecoOk = true;
     $senhaOk = true;
 
+    // Testando a $_FILES
+    // echo "<pre>";
+    // print_r($_FILES);
+    // echo "</pre>";
+
     // Verificar se o usuário enviou o formulário
     if($_POST){
 
@@ -23,7 +28,24 @@
         $confirmacao = $_POST['confirmacao'];
         $telefone = $_POST['telefone'];
         $email = $_POST['email'];
-        $imagem = null;
+
+        // Verificar se $_FILES está vindo
+        if($_FILES){
+
+            // Separando informações uteiis do $_FILES
+            $tmpName = $_FILES['foto']['tmp_name'];
+            $fileName = uniqid() . '-' . $_FILES['foto']['name'];
+            $error = $_FILES['foto']['error'];
+
+            // Salvar o arquivo numa pasta do meu sistema
+            move_uploaded_file($tmpName,'../img/usuarios/'.$fileName);
+
+            // Salvar o nome do arquivo em $imagem
+            $imagem ='../img/usuarios/'.$fileName;
+
+        } else {
+            $imagem = null;
+        }
         
         // Validando o nome
         if( strlen($_POST['nome']) < 5){
@@ -66,7 +88,7 @@
 </head>
 <body>
 	<link rel="stylesheet" href="../css/form-usuario.css">
-	<form id="form-usuario" method="POST">
+	<form id="form-usuario" method="POST" enctype="multipart/form-data">
 		<label>
             Nome:
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?= $nome ?>">
@@ -97,7 +119,7 @@
 		<label>
             <img src="../img/no-image.png" id="foto-carregada">
             <div>Clique para selecionar sua foto</div>
-            <input type="file" name="foto" id="foto">
+            <input type="file" name="foto" id="foto" accept=".jpg,.jpeg,.png,.gif">
         </label>
         <div class="controles">
             <button type="reset" class="secondary">Resetar</button>
