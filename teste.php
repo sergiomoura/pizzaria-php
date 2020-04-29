@@ -16,7 +16,6 @@
     
     include('includes/functions.php');
     echo "<pre>";
-    // addUsuario($nome,    $telefone,    $email,                     $endereço,             $senha, $imagem)
     addUsuario('Natália','11-99999999','natalia@digitalhouse.com','Rua das Profissionais','123',null);
     print_r(carregaUsuarios());
     echo "</pre>";

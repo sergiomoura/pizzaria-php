@@ -163,7 +163,7 @@
     function carregaUsuarios(){
         echo('add usuario executada');
         // Ler o arquivo para uma variável string
-        $strJson = file_get_contents("includes/usuarios.json");
+        $strJson = file_get_contents("../includes/usuarios.json");
 
         // transformar a string em array assoc (json_decode)
         $usuarios = json_decode($strJson, true);
@@ -193,7 +193,7 @@
         // se tiver, salva no arquivo usuarios.json
         if($stringjson){
             //salva a string json no arquivo usuarios.json
-            file_put_contents('includes/usuarios.json', $stringjson);
+            file_put_contents('../includes/usuarios.json', $stringjson);
         }
         
     }

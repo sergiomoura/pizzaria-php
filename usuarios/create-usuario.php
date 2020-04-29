@@ -1,6 +1,8 @@
 <?php
+    // Includes
+    include('../includes/functions.php');
 
-    // Valores padrãos
+    // Valores padrões
     $nome = '';
     $endereco = '';
     $senha = '';
@@ -11,7 +13,6 @@
     $enderecoOk = true;
     $senhaOk = true;
 
-
     // Verificar se o usuário enviou o formulário
     if($_POST){
 
@@ -20,6 +21,9 @@
         $endereco = $_POST['endereco'];
         $senha = $_POST['senha'];
         $confirmacao = $_POST['confirmacao'];
+        $telefone = $_POST['telefone'];
+        $email = $_POST['email'];
+        $imagem = null;
         
         // Validando o nome
         if( strlen($_POST['nome']) < 5){
@@ -38,10 +42,12 @@
 
         // Se tudo estiver ok, salva o usuário e redireciona para 
         // um dado endereço
-        // if($senhaOk && $nomeOk && $enderecoOk){
-        //     addUsuario($nome, $telefone, $email, $endereço, $senha, $imagem);
+        if($senhaOk && $nomeOk && $enderecoOk){
 
-        // }
+            // Salvando o usuário novo
+            addUsuario($nome, $telefone, $email, $endereco, $senha, $imagem);
+
+        }
 
     }
 ?>
