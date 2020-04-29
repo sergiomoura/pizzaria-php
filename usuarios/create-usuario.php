@@ -47,6 +47,9 @@
             // Salvando o usuário novo
             addUsuario($nome, $telefone, $email, $endereco, $senha, $imagem);
 
+            // Redirecionando usuário para a lista de usuários
+            header('location: list-usuarios.php');
+
         }
 
     }
