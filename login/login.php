@@ -1,5 +1,10 @@
 <?php 
     
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
+    //die();
+
     // Includes
     include("../includes/functions.php");
     
@@ -8,7 +13,7 @@
 
     // Verificar se o form de login foi enviado
     if($_POST){
-
+        
         // Buscar um usuário com o email enviado no $_POST['email']
         $email = $_POST['email'];
         $senha = $_POST['senha'];
@@ -21,6 +26,15 @@
                 
                 // Usuário está ok. Testar senha
                 if($usuario['senha'] == $senha){
+
+                    // Iniciar a session
+                    session_start();
+
+                    // Criando a session para o usuário
+                    $_SESSION['email'] = $usuario['email'];
+                    $_SESSION['nome'] = $usuario['nome'];
+                    $_SESSION['imagem'] = $usuario['imagem'];
+                    $_SESSION['telefone'] = $usuario['telefone'];
 
                     // Redirecionando para a página que lista usuarios
                     header('location: ../usuarios/list-usuarios.php');
