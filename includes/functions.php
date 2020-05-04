@@ -19,7 +19,6 @@
         // Terminando o for, se não encontrar pizza nenhuma, retornar false
         return false;
     }
-
     /**
      * Defina uma função que retorne um array com as pizzas
      * de destaque. Dica: $vetor[] = 3 adiciona o número 3
@@ -180,7 +179,7 @@
         $usuarios = carregaUsuarios();
         
         //cria um array associativo $u com os dados passados por parâmetro
-        $u = ['nome'=>$nome, 'telefone'=>$telefone, 'email'=>$email, 'endereço'=>$endereço, 'senha'=>$senha, 'imagem'=>$imagem];
+        $u = ['nome'=>$nome, 'telefone'=>$telefone, 'email'=>$email, 'endereço'=>$endereço, 'senha'=>password_hash($senha, PASSWORD_DEFAULT), 'imagem'=>$imagem];
 
         //adiciona $u ao final do array
         $usuarios[]= $u;

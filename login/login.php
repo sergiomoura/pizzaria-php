@@ -25,8 +25,9 @@
             if($usuario['email'] == $email){
                 
                 // Usuário está ok. Testar senha
-                if($usuario['senha'] == $senha){
-
+                // if($usuario['senha'] == $senha){
+                if(password_verify($senha,$usuario['senha'])){
+                    
                     // Iniciar a session
                     session_start();
 
